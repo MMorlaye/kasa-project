@@ -1,0 +1,15 @@
+.about-background {
+    width: 88%;
+    height: 200px;
+    background-image: url('../../assets/Image-source.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    margin: auto;
+    filter: brightness(0.6);
+  }
