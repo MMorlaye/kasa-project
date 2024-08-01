@@ -33,15 +33,24 @@ const AccordionItem = ({ title, content }) => {
     );
 };
 
-const Accordion = () => {
+const Accordion = ({ items }) => {
+    const defaultItems = [
+        { title: "Fiabilité", content: "Les annonces sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes." },
+        { title: "Respect", content: "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." },
+        { title: "Services", content: "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." },
+        { title: "Sécurité", content: "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes." }
+    ];
+
+    const accordionItems = items || defaultItems;
+
     return (
         <div className="accordion">
-            <AccordionItem title="Fiabilité" content="Les annonces sur kasa garantissent une fiablité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrements vérifiées par nos équipes." />
-            <AccordionItem title="Respect" content="La bienveillance fait partie des valeurs fondatrices de kasa. Tout comportement discriminatoire ou de perturbation du voisinage entrainera une exclusion de notre plateforme" />
-            <AccordionItem title="Services" content="La bienveillance fait partie des valeurs fondatrices de kasa. Tout comportement discriminatoire ou de perturbation du voisinage entrainera une exclusion de notre plateforme." />
-            <AccordionItem title="Sécurité" content="La sécurité est la priorité de kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établies par nos services. En laissant une note aussi bien à l'hôte qu'à locataire, cela permet à nos équipes de vérifier ques les standards sont bien respectés. Nous organisons égalements des atéliers sur la sécurité domestiques de nos hôtes." />
+            {accordionItems.map((item, index) => (
+                <AccordionItem key={index} title={item.title} content={item.content} />
+            ))}
         </div>
     );
 };
 
 export default Accordion;
+

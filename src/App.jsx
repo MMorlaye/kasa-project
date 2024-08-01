@@ -4,7 +4,8 @@ import Header from './Components/Header/header';
 import Footer from './Components/Footer/footer';
 import Home from './Pages/Home/home';
 import About from './Pages/About/about';
-
+import Error from './Pages/Error/error';
+import LogementDetails from './Pages/LogementDetails/LogementDetails';
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/logement/:id" element={<LogementDetails />} />
+            <Route path="*" element={<Error />} />
           </Routes>
         </main>
         <Footer />
@@ -23,4 +26,4 @@ const App = () => {
   );
 };
 
-export default App
+export default App;
