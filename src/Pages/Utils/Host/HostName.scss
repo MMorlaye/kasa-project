@@ -1,0 +1,16 @@
+.column-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #ff5a5f;
+    font-size: 18px;
+  }
+  
+  .column-item {
+    margin: 0px 10px;
+  }
+  
+  .last-name {
+    align-self: flex-end; 
+  }
+  

@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.container h1 {
+    font-weight: normal;
+    color: #FF6060;
+}
+
+.container p {
+    padding-bottom: 100px;
+    color: #000;
+    text-decoration: underline;
+}
